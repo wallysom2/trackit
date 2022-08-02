@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react';
+import "@fontsource/lexend-deca";
 
 import Login from "./Login";
 import Cadastro from "./Cadastro";

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import logo from "./../assets/imgs/logo.svg";
 
@@ -7,11 +8,11 @@ const Login = () => {
         <LoginStyled>
             <img src={logo} className="login__logo" alt="logo" />
             <form className="login__form">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <button type="submit">Login</button>
+                <input type="text" placeholder="email" />
+                <input type="password" placeholder="senha" />
+                <button type="submit">Entrar</button>
             </form>
-            <h4>Náo tem uma conta? Cadastre-se</h4>
+            <Link to="/cadastro">Náo tem uma conta? Cadastre-se</Link>
         </LoginStyled>
     );
 }
@@ -25,6 +26,11 @@ const LoginStyled = styled.div`
     justify-content: center;
     height: 100vh;
     background-color: #f5f5f5;
+    font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19.976px;
+            line-height: 25px;
     .login__logo {
         width: 100px;
         margin-bottom: 20px;
@@ -46,6 +52,13 @@ const LoginStyled = styled.div`
             border: 1px solid #ccc;
             margin-bottom: 10px;
         }
+        input::placeholder {
+            font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19.976px;
+            line-height: 25px;
+        }
         button {
             width: 100%;
             padding: 10px;
@@ -53,6 +66,11 @@ const LoginStyled = styled.div`
             border: 1px solid #ccc;
             background-color: #00a8ff;
             color: #fff;
+            font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19.976px;
+            line-height: 25px;
 
             &:hover {
                 background-color: #00a8ff;
@@ -60,10 +78,11 @@ const LoginStyled = styled.div`
             }
         }
     }
-    h4 {
-        margin-top: 20px;
-        font-size: 14px;
+    a {
         color: #00a8ff;
-        text-align: center;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 `;
